@@ -11,7 +11,7 @@ export default function Home() {
   const marqueeItems = skills?.map((s) => s.name);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <Hero />
 
       <MarqueeStrip items={marqueeItems} direction="left" />

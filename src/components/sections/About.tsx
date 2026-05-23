@@ -22,7 +22,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-24 px-6 bg-white/[0.02]">
+    <section id="about" className="py-24 px-6 bg-white/[0.02] relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left Side: Bio */}
@@ -83,13 +83,19 @@ export default function About() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="mt-12">
-              <button className="group flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all">
+              <a
+                href="/files/cv_chandra_adam_pratama.pdf"
+                download="cv_chandra_adam_pratama.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all w-fit cursor-pointer"
+              >
                 <Download
                   size={18}
                   className="group-hover:-translate-y-1 transition-transform"
                 />
                 <span>Download CV</span>
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 
